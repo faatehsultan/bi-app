@@ -1,6 +1,6 @@
-#The BI App
+# The BI App
 
-##The Bounded Integer App
+## The Bounded Integer App
 
 I developed this app just for fun. If any bug found, please create issue or contact me.
 
