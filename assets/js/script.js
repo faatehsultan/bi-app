@@ -48,6 +48,32 @@ function toDevPage() {
   document.getElementById("entry-page").style = "display: none;";
   document.getElementById("dev-page").style = "";
 }
+(function randomColoring() {
+  var curRand = Math.floor(Math.random() * 10);
+  console.log(curRand);
+  var navbarElem = document.getElementById("top-navbar");
+  if (curRand == 0) {
+    navbarElem.style = "background-color:#003066;";
+  } else if (curRand == 1) {
+    navbarElem.style = "background-color:#620018;";
+  } else if (curRand == 2) {
+    navbarElem.style = "background-color:#5f1b00;";
+  } else if (curRand == 3) {
+    navbarElem.style = "background-color:#2e3f00;";
+  } else if (curRand == 4) {
+    navbarElem.style = "background-color:#74004c;";
+  } else if (curRand == 5) {
+    navbarElem.style = "background-color:#192d3e;";
+  } else if (curRand == 6) {
+    navbarElem.style = "background-color:#84362e;";
+  } else if (curRand == 7) {
+    navbarElem.style = "background-color:#006e3e;";
+  } else if (curRand == 8) {
+    navbarElem.style = "background-color:#824f00;";
+  } else {
+    navbarElem.style = "background-color:#781748;";
+  }
+})();
 
 //app handling
 function increase(inc) {
@@ -57,11 +83,9 @@ function increase(inc) {
 }
 function decrease(dec) {
   dec = dec % (upperBound - lowerBound + 1);
-  if(dec <= (currentValue - lowerBound))
-  {
+  if (dec <= currentValue - lowerBound) {
     return currentValue - dec;
-  }
-  else {
+  } else {
     dec = dec - (currentValue - lowerBound);
     return Number(upperBound - dec + 1);
   }
